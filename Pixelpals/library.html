@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pixelpals</title>
+	<link rel="stylesheet" href="library.css" />
+</head>
+<body>
+    <div class="image-button">
+        <img src="library-image/image1-button.png" class="image-button1" data-src="image1-button.png">
+        <img src="library-image/image2-button.png" class="image-button2" data-src="image2-button.png">
+        <img src="library-image/image3-button.png" class="image-button3" data-src="image3-button.png">
+        <img src="library-image/image4-button.png" class="image-button4" data-src="image4-button.png">
+        <img src="library-image/image5-button.png" class="image-button5" data-src="image5-button.png">
+        <img src="library-image/image6-button.png" class="image-button6" data-src="image6-button.png">
+    </div>
+
+    <div class ="mainPage">
+        <a href="main.html">
+            <button class="back-button" id="click-to-main()">
+                <img src="instruction-image/back-button.png" alt="back button" />
+            </button>
+        </a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-button img').forEach(img => {
+            img.addEventListener('click', () => {
+                const selectedImage = img.getAttribute('data-src');
+                localStorage.setItem('selectedLibraryImage', selectedImage);
+                window.location.href = 'main.html';
+            });
+        });
+
+        const cometoStart = document.getElementById("click-to-main");
+        backBtn.addEventListener('click', () => {
+            window.location.href = "main.html";
+        });
+    </script>
+</body>
+</html>

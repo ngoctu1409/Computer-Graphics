@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pixelpals</title>
+	<link rel="stylesheet" href="main.css" />
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+</head>
+<body>	
+	<section class ="tools">
+		<div class="tools-left">
+			<button class="pen-button" id="pen"><img src="main-image/pen.png" alt="pen" /></button>
+
+			<ul class="shape">
+				<li>
+					<button class="shape-list">
+						<img src="main-image/shape.png" alt="shape" />
+					</button>
+					<ul class="sub-shape-list">
+						<li><button class="rectangle-button" id="rectangle">
+							<img src="main-image/rectangle.png" alt="rectangle" />
+						</button></li>
+						<li><button class="circle-button" id="circle">
+							<img src="main-image/circle.png" alt="circle" />
+						</button></li>
+						<li><button class="triangle-button" id="triangle">
+							<img src="main-image/triangle.png" alt="triangle" />
+						</button></li>
+					</ul>
+				</li>    
+			</ul>
+			
+			<li class="eraser-container">
+				<button class="eraser-button" id="eraser"><img src="main-image/eraser.png" alt="eraser" /></button>
+				<input type="range" id="eraser-size" min="1" max="50" value="10" style="display: none;">
+			</li>
+			<button class="line-button" id="line"><img src="main-image/line.png" alt="line" /></button>
+			<button class="bucket-button" id="bucket"><img src="main-image/bucket.png" alt="bucket" /></button>
+			<button class="pallete-button" id="pallete"><img src="main-image/pallete.png" alt="pallete" /></button>
+			<button class="selection-button" id="selection"><img src="main-image/selection.png" alt="selection" /></button>
+			<button class="text-button" id="text"><img src="main-image/text.png" alt="text" /></button>
+		</div>
+
+		<div class="tools-bottom">
+			<div class ="libraryPage">
+				<a href="library.html">
+					<button class="library-button" id="click-to-library()">
+						<img src="main-image/library.png" alt="library" />
+					</button>
+				</a>
+			</div>
+			<button class="upload-button" id="upload">
+				<img src="main-image/upload.png" alt="upload" />
+			</button>
+			<input type="file" id="image-upload" accept="image/*" style="display: none;">
+		</div>
+
+		<div class="tools-top">
+			<button class="clearCanvas-button" id="clearCanvas"><img src="main-image/clear.png" alt="clear" /></button>
+			<button class="undo-button" id="undo"><img src="main-image/undo.png" alt="undo" /></button>
+			<button class="save-button" id="save"><img src="main-image/download.png" alt="save" /></button>
+			<div class ="menuPage">
+				<a href="menu.html">
+					<button class="back-button" id="click-to-home()">
+						<img src="main-image/home.png" alt="home" />
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="drawingBoard">
+		<div class="selection-outline"></div>
+		<canvas 
+			id="canvas" 
+			width="583" 
+			height="400"
+			style="position: relative; z-index: 1;">
+		</canvas>
+	</section>
+    
+	<script src="algorithm.js"></script>	
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    background-image: url('library-image/background-library.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+}
+
+.back-button {
+    background: transparent; 
+    border: none; 
+    cursor: pointer;
+    outline: none;
+    position: fixed;
+    margin: 59px 732px;
+}
+
+.image-button1 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 197px 185px;
+}
+
+.image-button2 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 197px 404px;
+}
+
+.image-button3 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 197px 617px;
+}
+
+.image-button4 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 384px 185px;
+}
+
+.image-button5 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 383px 404px;
+}
+
+.image-button6 {
+    cursor: pointer; 
+    position: absolute;
+    margin: 383px 617px;
+}
