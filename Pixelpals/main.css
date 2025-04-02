@@ -56,25 +56,12 @@ ul,
 }
 
 
-.selection-outline {
-    position: absolute;
-    pointer-events: none;
-    display: none; 
-    z-index: 2; 
-    box-shadow: 0 0 3px rgba(0, 0, 255, 0.3);
-    transition: all 0.1s ease;
-    border: 2px dashed #2196F3;
-    background-color: rgba(0, 0, 255, 0.05);
-    transition: all 0.05s ease-out;
-    box-shadow: 0 0 0 1px rgba(0, 0, 255, 0.5);
-}   
-
 .pen-button,
 .shape-list,
 .eraser-button,
 .line-button,
 .bucket-button,
-.pallete-button,
+.palette-button,
 .selection-button,
 .text-button,
 .library-button,
@@ -91,26 +78,38 @@ ul,
     outline: none; 
 }
 
+/* Công cụ pen */
 .pen-button {
     margin: 141px 102px;
 }
 
-.eraser-button {
-    margin: 202px 86px;
+.pen-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
 }
 
-.back-button {
-    margin: 26px 835px;
+.pen-button img.active {
+    content: url('main-image/pen2.png'); 
+    opacity: 1; 
+    margin: -5px -6px;
 }
 
-.save-button {
-    margin: 24px 732px;
-}
 
+/* Công cụ shape */
 .shape-list {
     margin: 133px 136px;
 }
 
+.shape-list img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.shape-list img.active {
+    content: url('main-image/shape-list2.png'); 
+    opacity: 1; 
+    margin: 3px -3px;
+}
 
 .sub-shape-list {
     display: none; 
@@ -127,41 +126,168 @@ ul,
     display: block; 
 }
 
-.bucket-button {
-    margin: 280px 99px;
+
+/* Công cụ eraser */
+.eraser-button {
+    margin: 202px 86px;
 }
 
+.eraser-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.eraser-button img.active {
+    content: url('main-image/eraser2.png'); 
+    opacity: 1; 
+    margin: 4px 10.5px;
+}
+
+
+/* Công cụ line */
 .line-button {
     margin: 206px 178px;
 }
 
-.pallete-button {
+.line-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.line-button img.active {
+    content: url('main-image/line2.png'); 
+    opacity: 1; 
+    margin: 0.5px -5px;
+}
+
+
+/* Công cụ bucket */
+.bucket-button {
+    margin: 280px 99px;
+}
+
+.bucket-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.bucket-button img.active {
+    content: url('main-image/bucket2.png'); 
+    opacity: 1; 
+    margin: -5px -3px;
+}
+
+
+/* Công cụ palette */
+.palette-button {
     margin: 267px 167px;
 }
 
-.clearCanvas-button {
-    margin: 26px 538px;
+.palette-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
 }
 
-.undo-button {
-    margin: 26px 640px;
+.palette-button img.active {
+    content: url('main-image/palette2.png'); 
+    opacity: 1; 
+    margin: 9px 6px;
 }
 
+
+/* Công cụ selection */
 .selection-button {
     margin: 355px 101px;
 }
 
+.selection-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.selection-button img.active {
+    content: url('main-image/selection2.png'); 
+    opacity: 1; 
+    margin: -6.5px -5px;
+}
+
+
+/* Công cụ text */
 .text-button {
     margin: 354px 179px;
 }
 
+.text-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.text-button img.active {
+    content: url('main-image/text2.png'); 
+    opacity: 1; 
+    margin: -5px -6px;
+}
+
+
+/* Công cụ library */
 .library-button {
     margin: 476px 101px;
 }
+.library-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
 
+
+/* Công cụ upload */
 .upload-button {
     margin: 475px 193px;
 }
+.upload-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+
+/* Công cụ clearCanvas */
+.clearCanvas-button {
+    margin: 26px 538px;
+}
+.clearCanvas-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+
+/* Công cụ undo */
+.undo-button {
+    margin: 26px 640px;
+}
+.undo-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+
+/* Công cụ save */
+.save-button {
+    margin: 24px 732px;
+}
+.save-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+
+/* Công cụ back-to-home */
+.back-button {
+    margin: 26px 835px;
+}
+.back-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
 
 .rectangle-button,
 .circle-button,
@@ -178,10 +304,43 @@ ul,
     margin: -59px -29px;
 }
 
+.rectangle-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.rectangle-button img.active {
+    content: url('main-image/rectangle2.png'); 
+    opacity: 1; 
+    margin: 2px 6px;
+}
+
 .circle-button {
     margin: -16px -29px;
 }
 
+.circle-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.circle-button img.active {
+    content: url('main-image/circle2.png'); 
+    opacity: 1; 
+    margin: -1px 5px;
+}
+
 .triangle-button {
     margin: 24px -29px;
+}
+
+.triangle-button img:not(.active):hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
+.triangle-button img.active {
+    content: url('main-image/triangle2.png'); 
+    opacity: 1; 
+    margin: 2px 3px;
 }

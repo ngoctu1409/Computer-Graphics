@@ -11,36 +11,50 @@
 <body>	
 	<section class ="tools">
 		<div class="tools-left">
-			<button class="pen-button" id="pen"><img src="main-image/pen.png" alt="pen" /></button>
+			<button class="pen-button" id="pen">
+				<img src="main-image/pen.png" alt="Pen" id="pen-img" />
+			</button>
 
 			<ul class="shape">
 				<li>
-					<button class="shape-list">
-						<img src="main-image/shape.png" alt="shape" />
+					<button class="shape-list" id="shape-list">
+						<img src="main-image/shape-list.png" alt="Shape List" id="shape-list-img" />
 					</button>
 					<ul class="sub-shape-list">
 						<li><button class="rectangle-button" id="rectangle">
-							<img src="main-image/rectangle.png" alt="rectangle" />
+							<img src="main-image/rectangle.png" alt="rectangle" id="rectangle-img" />
 						</button></li>
 						<li><button class="circle-button" id="circle">
-							<img src="main-image/circle.png" alt="circle" />
+							<img src="main-image/circle.png" alt="circle" id="circle-img" />
 						</button></li>
 						<li><button class="triangle-button" id="triangle">
-							<img src="main-image/triangle.png" alt="triangle" />
+							<img src="main-image/triangle.png" alt="triangle" id="triangle-img"/>
 						</button></li>
 					</ul>
 				</li>    
 			</ul>
 			
 			<li class="eraser-container">
-				<button class="eraser-button" id="eraser"><img src="main-image/eraser.png" alt="eraser" /></button>
+				<button class="eraser-button" id="eraser">
+					<img src="main-image/eraser.png" alt="eraser" id="eraser-img"/>
+				</button>
 				<input type="range" id="eraser-size" min="1" max="50" value="10" style="display: none;">
 			</li>
-			<button class="line-button" id="line"><img src="main-image/line.png" alt="line" /></button>
-			<button class="bucket-button" id="bucket"><img src="main-image/bucket.png" alt="bucket" /></button>
-			<button class="pallete-button" id="pallete"><img src="main-image/pallete.png" alt="pallete" /></button>
-			<button class="selection-button" id="selection"><img src="main-image/selection.png" alt="selection" /></button>
-			<button class="text-button" id="text"><img src="main-image/text.png" alt="text" /></button>
+			<button class="line-button" id="line">
+				<img src="main-image/line.png" alt="line" id="line-img"/>
+			</button>
+			<button class="bucket-button" id="bucket">
+				<img src="main-image/bucket.png" alt="bucket" id="bucket-img"/>
+			</button>
+			<button class="palette-button" id="palette">
+				<img src="main-image/palette.png" alt="palette" id="palette-img"/>
+			</button>
+			<button class="selection-button" id="selection">
+				<img src="main-image/selection.png" alt="selection" id="selection-img" />
+			</button>
+			<button class="text-button" id="text">
+				<img src="main-image/text.png" alt="text" id="text-img"/>
+			</button>
 		</div>
 
 		<div class="tools-bottom">
@@ -60,7 +74,7 @@
 		<div class="tools-top">
 			<button class="clearCanvas-button" id="clearCanvas"><img src="main-image/clear.png" alt="clear" /></button>
 			<button class="undo-button" id="undo"><img src="main-image/undo.png" alt="undo" /></button>
-			<button class="save-button" id="save"><img src="main-image/download.png" alt="save" /></button>
+			<button class="save-button" id="save"><img src="main-image/save.png" alt="save" /></button>
 			<div class ="menuPage">
 				<a href="menu.html">
 					<button class="back-button" id="click-to-home()">

@@ -35,6 +35,7 @@ let prevMouseX, prevMouseY, snapshot;
 let eraserSize = 10;
 let offsetX, offsetY;
 let canvasSnapshot;
+let elements = [];
 
 
 window.addEventListener("load", () => {
@@ -96,11 +97,13 @@ const drawingRectangle = (e) => {
     let width = Math.abs(e.offsetX - startX);
     let height = Math.abs(e.offsetY - startY);
 
+    ctx.putImageData(snapshot, 0, 0); 
     ctx.beginPath();
     ctx.strokeStyle = currentColor;
     ctx.strokeRect(left, top, width, height);
     ctx.closePath();
 }
+
 
 
 /* Vẽ hình tròn */
@@ -521,7 +524,7 @@ document.getElementById("eraser").addEventListener("click", function() {
     selectTool("eraser");
 });
 
-document.getElementById("pallete").addEventListener("click", () => {
+document.getElementById("palette").addEventListener("click", () => {
     colorPicker.elt.style.display = "block"; 
     colorPicker.elt.click(); 
 });
@@ -607,3 +610,38 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("undo").addEventListener("click", () => {
     undo();
 });
+
+// Danh sách các công cụ
+const tools = [
+    "pen", "eraser", "line", "rectangle", "circle", "triangle", 
+    "bucket", "palette", "selection", "text", "shape-list"
+];
+
+function resetToolImages() {
+    tools.forEach((tool) => {
+        const img = document.getElementById(`${tool}-img`);
+        if (img) {
+            img.src = `main-image/${tool}.png`;
+            img.classList.remove("active"); 
+        }
+    });
+}
+
+tools.forEach((tool) => {
+    const button = document.getElementById(tool);
+    if (button) {
+        button.addEventListener("click", () => {
+            resetToolImages();
+
+            const selectedImg = document.getElementById(`${tool}-img`);
+            if (selectedImg) {
+                selectedImg.src = `main-image/${tool}2.png`; 
+                selectedImg.classList.add("active"); 
+            }
+        });
+    }
+});
+
+
+
+

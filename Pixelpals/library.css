@@ -17,6 +17,11 @@ body {
     margin: 59px 732px;
 }
 
+.back-button :hover {
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+}
+
 .image-button1 {
     cursor: pointer; 
     position: absolute;
