@@ -5,30 +5,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pixelpals</title>
-	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="night.css" />
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
 </head>
 <body>	
 	<section class ="tools">
 		<div class="tools-left">
 			<button class="pen-button" id="pen">
-				<img src="main-image/pen.png" alt="Pen" id="pen-img" />
+				<img src="main-night-image/pen3.png" alt="Pen" id="pen-img" />
 			</button>
 
 			<ul class="shape">
 				<li>
 					<button class="shape-list" id="shape-list">
-						<img src="main-image/shape-list.png" alt="Shape List" id="shape-list-img" />
+						<img src="main-night-image/shape-list3.png" alt="Shape List" id="shape-list-img" />
 					</button>
 					<ul class="sub-shape-list">
 						<li><button class="rectangle-button" id="rectangle">
-							<img src="main-image/rectangle.png" alt="rectangle" id="rectangle-img" />
+							<img src="main-night-image/rectangle3.png" alt="rectangle" id="rectangle-img" />
 						</button></li>
 						<li><button class="circle-button" id="circle">
-							<img src="main-image/circle.png" alt="circle" id="circle-img" />
+							<img src="main-night-image/circle3.png" alt="circle" id="circle-img" />
 						</button></li>
 						<li><button class="triangle-button" id="triangle">
-							<img src="main-image/triangle.png" alt="triangle" id="triangle-img"/>
+							<img src="main-night-image/triangle3.png" alt="triangle" id="triangle-img"/>
 						</button></li>
 					</ul>
 				</li>    
@@ -36,26 +36,26 @@
 			
 			<li class="eraser-container">
 				<button class="eraser-button" id="eraser">
-					<img src="main-image/eraser.png" alt="eraser" id="eraser-img"/>
+					<img src="main-night-image/eraser3.png" alt="eraser" id="eraser-img"/>
 				</button>
 				<input type="range" id="eraser-size" min="1" max="50" value="10" style="display: none;">
 			</li>
 			<button class="line-button" id="line">
-				<img src="main-image/line.png" alt="line" id="line-img"/>
+				<img src="main-night-image/line3.png" alt="line" id="line-img"/>
 			</button>
 			<button class="bucket-button" id="bucket">
-				<img src="main-image/bucket.png" alt="bucket" id="bucket-img"/>
+				<img src="main-night-image/bucket3.png" alt="bucket" id="bucket-img"/>
 			</button>
 			<button class="palette-button" id="palette">
-				<img src="main-image/palette.png" alt="palette" id="palette-img"/>
+				<img src="main-night-image/palette3.png" alt="palette" id="palette-img"/>
 			</button>
 			<button class="clearCanvas-button" id="clearCanvas">
-				<img src="main-image/clear.png" alt="clear" id="clear-img" />
+				<img src="main-night-image/clear3.png" alt="clear" id="clear-img" />
 			</button>
-			<div class="nightPage">
-				<a href="night.html">
-					<button class="night-button" id="night-mode" data-target="night.html">
-						<img src="main-image/night.png" alt="night" id="night-img"/>
+			<div class="mainPage">
+				<a href="main.html">
+					<button class="night-button" id="night-mode">
+						<img src="main-night-image/night3.png" alt="night" id="night-img"/>
 					</button>
 				</a>
 			</div>
@@ -63,29 +63,29 @@
 
 		<div class="tools-bottom">
 			<div class ="libraryPage">
-				<a href="library.html" id="open-library" onclick="setSourcePage('main')">
-					<button class="library-button" id="library-button" data-target="library.html">
-						<img src="main-image/library.png" alt="library" id="library-img" />
+				<a href="library.html" id="open-library" onclick="setSourcePage('night')">
+					<button class="library-button" id="library-button">
+						<img src="main-night-image/library3.png" alt="library" id="library-img" />
 					</button>
 				</a>
 			</div>
 			<button class="upload-button" id="upload">
-				<img src="main-image/upload.png" alt="upload" id="upload-img"/>
+				<img src="main-night-image/upload3.png" alt="upload" id="upload-img"/>
 			</button>
 			<input type="file" id="image-upload" accept="image/*" style="display: none;">
 		</div>
 
 		<div class="tools-top">
 			<button class="undo-button" id="undo">
-				<img src="main-image/undo.png" alt="undo" id="undo-img" />
+				<img src="main-night-image/undo3.png" alt="undo" id="undo-img" />
 			</button>
 			<button class="save-button" id="save">
-				<img src="main-image/save.png" alt="save" id="save-img"/>
+				<img src="main-night-image/save3.png" alt="save" id="save-img"/>
 			</button>
 			<div class ="menuPage">
 				<a href="menu.html">
-					<button class="back-button" id="back-button" data-target="menu.html">
-						<img src="main-image/home.png" alt="home" id="home-img"/>
+					<button class="back-button" id="back-button">
+						<img src="main-night-image/home3.png" alt="home" id="home-img"/>
 					</button>
 				</a>
 			</div>
@@ -101,12 +101,12 @@
 			style="position: relative; z-index: 1;">
 		</canvas>
 	</section>
-    
+
 	<audio id="tool-sound">
         <source src="audio/pop-up-sound.mp4" type="audio/mpeg">
     </audio>
-
-	<script src="algorithm.js"></script>
-	<script src="main.js"></script>		
+    
+	<script src="algorithm.js"></script>	
+    <script src="night.js"></script>
 </body>
 </html>

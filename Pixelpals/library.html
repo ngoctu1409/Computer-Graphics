@@ -19,25 +19,44 @@
 
     <div class ="mainPage">
         <a href="main.html">
-            <button class="back-button" id="click-to-main()">
+            <button class="back-button" id="back-button">
                 <img src="instruction-image/back-button.png" alt="back button" />
             </button>
         </a>
     </div>
 
+    <audio id="button-sound">
+        <source src="audio/pop-up-sound.mp4" type="audio/mpeg">
+    </audio>
+
     <script>
+        // Lưu hình ảnh được chọn vào Local Storage và chuyển về trang nguồn
         document.querySelectorAll('.image-button img').forEach(img => {
             img.addEventListener('click', () => {
-                const selectedImage = img.getAttribute('data-src');
+                const selectedImage = img.getAttribute('data-src'); // Lấy đường dẫn hình ảnh
                 localStorage.setItem('selectedLibraryImage', selectedImage);
-                window.location.href = 'main.html';
+    
+                const sourcePage = localStorage.getItem('sourcePage');
+                if (sourcePage === 'main') {
+                    window.location.href = 'main.html'; 
+                } else if (sourcePage === 'night') {
+                    window.location.href = 'night.html'; 
+                }
             });
         });
 
-        const cometoStart = document.getElementById("click-to-main");
-        backBtn.addEventListener('click', () => {
-            window.location.href = "main.html";
+        const buttonSound = document.getElementById("button-sound");
+
+        const backButton = document.getElementById("back-button");
+        backButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            buttonSound.play().then(() => {
+                setTimeout(() => {
+                    window.location.href = "main.html"; 
+                }, 350); 
+            })
         });
+        
     </script>
 </body>
 </html>

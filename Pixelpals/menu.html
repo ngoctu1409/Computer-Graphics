@@ -9,8 +9,8 @@
 </head>
 <body>
 	<div class ="mainPage">
-        <a href="main.html">
-            <button class="start-button" id="click-to-main()">
+        <a href="main.html" id="main-link">
+            <button class="start-button" id="start-button">
                 <img src="menu-image/start-button.png" alt="start button" />
             </button>
 		</a>
@@ -18,23 +18,42 @@
 
     <div class ="instructionPage">
         <a href="instruction.html">
-            <button class="instruction-button" id="click-to-instruction()">
+            <button class="instruction-button" id="instruction-button">
                 <img src="menu-image/instruction-button.png" alt="instruction button" />
             </button>
         </a>
     </div>
 
+    <audio id="background-music" autoplay loop>
+        <source src="audio/music-menu.mp4" type="audio/mpeg">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="audio/pop-up-sound.mp4" type="audio/mpeg">
+    </audio>
+
 	<script>
-        const cometoStart = document.getElementById("click-to-main");
-        backBtn.addEventListener('click', () => {
-            window.location.href = "main.html";
+        const buttonSound = document.getElementById("button-sound");
+
+        document.getElementById("start-button").addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            buttonSound.play().then(() => {
+                setTimeout(() => {
+                    window.location.href = document.getElementById("main-link").href;
+                }, 350); 
+            })
         });
 
-        const cometoInstruction = document.getElementById("click-to-instruction");
-        backBtn.addEventListener('click', () => {
-            window.location.href = "instruction.html";
-        });
+        document.getElementById("instruction-button").addEventListener("click", function(event) {
+            event.preventDefault(); 
 
+            buttonSound.play().then(() => {
+                setTimeout(() => {
+                    window.location.href = "instruction.html";
+                }, 350); 
+            });
+        });
     </script>
 	
 </body>

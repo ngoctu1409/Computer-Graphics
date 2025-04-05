@@ -1,5 +1,5 @@
 body{
-    background-image: url('main-image/background-main.png');
+    background-image: url('main-night-image/background-night.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -8,14 +8,7 @@ body{
     flex-direction: column;
 }
 
-body.night-mode {
-    background-image: url('main-night-image/background-night.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #ffffff; /* Màu chữ sáng */
-}
+
 /* Dropdown menu của shape */
 ul,
 .eraser-container {
@@ -36,9 +29,9 @@ ul,
 
 #eraser-size::-webkit-slider-runnable-track {
     width: 8px;
-    background: #ff8bb4; 
+    background: #E5B6E7; 
     border-radius: 5px;
-    box-shadow: 0px 0px 0px 2px #f14f81; 
+    box-shadow: 0px 0px 0px 2px #2F0D3F; 
 }
 
 #eraser-size::-webkit-slider-thumb {
@@ -46,8 +39,8 @@ ul,
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #fffbdd;
-    border: 2px solid #f14f81;
+    background: #fffceb;
+    border: 2px solid #2F0D3F;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -88,7 +81,7 @@ ul,
 
 /* Công cụ pen */
 .pen-button {
-    margin: 141px 102px;
+    margin: 140px 102px;
 }
 
 .pen-button img:not(.active):hover {
@@ -97,41 +90,34 @@ ul,
 }
 
 .pen-button img.active {
-    content: url('main-image/pen2.png'); 
+    content: url('main-night-image/pen4.png'); 
     opacity: 1; 
-    margin: -5px -6px;
-}
-
-.night-mode .pen-button {
-    margin: 140px 102px;
+    margin: -5px -8px;
 }
 
 
 /* Công cụ shape */
 .shape-list {
-    margin: 133px 136px;
+    margin: 140px 135px;
 }
 
 .shape-list img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .shape-list img.active {
-    content: url('main-image/shape-list2.png'); 
+    content: url('main-night-image/shape-list4.png'); 
     opacity: 1; 
-    margin: 3px -3px;
+    margin: -4px -6px;
 }
 
-.night-mode .shape-list {
-    margin: 140px 135px;
-}
 
 .sub-shape-list {
     display: none; 
     position: absolute;
-    background: #FFFBDD;
-    border: 5px solid #f14f81;
+    background: #2F0D3F;
+    border: 5px solid #E5B6E7;
     padding: 68px 24px;
     margin: 114px 230px;
     border-radius: 20px;
@@ -145,176 +131,140 @@ ul,
 
 /* Công cụ eraser */
 .eraser-button {
-    margin: 202px 86px;
+    margin: 206px 96px;
 }
 
 .eraser-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .eraser-button img.active {
-    content: url('main-image/eraser2.png'); 
+    content: url('main-night-image/eraser4.png'); 
     opacity: 1; 
-    margin: 4px 10.5px;
+    margin: -6px -2px;
 }
-
-.night-mode .eraser-button {
-    margin: 206px 96px;
-}
-
 
 
 /* Công cụ line */
 .line-button {
-    margin: 206px 178px;
+    margin: 203px 177px;
 }
 
 .line-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .line-button img.active {
-    content: url('main-image/line2.png'); 
+    content: url('main-night-image/line4.png'); 
     opacity: 1; 
-    margin: 0.5px -5px;
-}
-
-.night-mode .line-button {
-    margin: 203px 177px;
+    margin: -2px -8px;
 }
 
 
 /* Công cụ bucket */
 .bucket-button {
-    margin: 280px 99px;
+    margin: 283px 103px;
 }
 
 .bucket-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .bucket-button img.active {
-    content: url('main-image/bucket2.png'); 
+    content: url('main-night-image/bucket4.png'); 
     opacity: 1; 
-    margin: -5px -3px;
-}
-
-.night-mode .bucket-button {
-    margin: 283px 103px;
+    margin: -11px -13px;
 }
 
 
 /* Công cụ palette */
 .palette-button {
-    margin: 267px 167px;
+    margin: 256px 155px;
 }
 
 .palette-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .palette-button img.active {
-    content: url('main-image/palette2.png'); 
+    content: url('main-night-image/palette4.png'); 
     opacity: 1; 
-    margin: 9px 6px;
-}
-
-.night-mode .palette-button {
-    margin: 256px 155px;
+    margin: 16px 13px;
 }
 
 
 /* Công cụ clearCanvas */
 .clearCanvas-button {
-    margin: 355px 100px;
+    margin: 342px 77px;
 }
 .clearCanvas-button :hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
-.night-mode .clearCanvas-button {
-    margin: 342px 77px;
-}
 
 /* Công cụ night mode */
 .night-button {
-    margin: 345px 164px;
-}
-
-.night-button :hover {
-    opacity: 0.6; 
-    transition: opacity 0.3s ease; 
-}
-
-.night-mode .night-button {
     margin: 354px 168px;
 }
 
+.night-button :hover {
+    opacity: 0.5; 
+    transition: opacity 0.3s ease; 
+}
 
 
 /* Công cụ library */
 .library-button {
-    margin: 476px 101px;
-}
-.library-button :hover {
-    opacity: 0.6; 
-    transition: opacity 0.3s ease; 
-}
-.night-mode .library-button {
     margin: 466px 90px;
 }
+.library-button :hover {
+    opacity: 0.5; 
+    transition: opacity 0.3s ease; 
+}
+
 
 /* Công cụ upload */
 .upload-button {
     margin: 475px 193px;
 }
 .upload-button :hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 
 /* Công cụ undo */
 .undo-button {
-    margin: 26px 640px;
+    margin: 17px 625px;
 }
 .undo-button :hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
-}
-.night-mode .undo-button {
-    margin: 17px 625px;
 }
 
 
 /* Công cụ save */
 .save-button {
-    margin: 24px 732px;
+    margin: 9px 723px;
 }
 .save-button :hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
-}
-.night-mode .save-button {
-    margin: 9px 723px;
 }
 
 
 /* Công cụ back-to-home */
 .back-button {
-    margin: 26px 835px;
+    margin: 30px 828px;
 }
 .back-button :hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
-}
-.night-mode .back-button {
-    margin: 30px 828px;
 }
 
 
@@ -330,46 +280,46 @@ ul,
 }
 
 .rectangle-button {
-    margin: -59px -29px;
+    margin: -59px -36px;
 }
 
 .rectangle-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .rectangle-button img.active {
-    content: url('main-image/rectangle2.png'); 
+    content: url('main-night-image/rectangle4.png'); 
     opacity: 1; 
-    margin: 2px 6px;
+    margin: -1px 12px;
 }
 
 .circle-button {
-    margin: -16px -29px;
+    margin: -16px -25px;
 }
 
 .circle-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .circle-button img.active {
-    content: url('main-image/circle2.png'); 
+    content: url('main-night-image/circle4.png'); 
     opacity: 1; 
-    margin: -1px 5px;
+    margin: -2px 1px;
 }
 
 .triangle-button {
-    margin: 24px -29px;
+    margin: 24px -32px;
 }
 
 .triangle-button img:not(.active):hover {
-    opacity: 0.6; 
+    opacity: 0.5; 
     transition: opacity 0.3s ease; 
 }
 
 .triangle-button img.active {
-    content: url('main-image/triangle2.png'); 
+    content: url('main-night-image/triangle4.png'); 
     opacity: 1; 
     margin: 2px 3px;
 }

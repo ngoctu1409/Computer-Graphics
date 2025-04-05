@@ -35,20 +35,12 @@ let prevMouseX, prevMouseY, snapshot;
 let eraserSize = 10;
 let offsetX, offsetY;
 let canvasSnapshot;
-let elements = [];
 
-
-window.addEventListener("load", () => {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-});
 
 const selectTool = (tool) => {
     currentTool = tool;
     ctx.lineWidth = tool === "pen" ? 1 : 0.5;
-    ctx.setLineDash([]);
 };
-
 
 
 /* Thuật toán Bresenham vẽ đường thẳng */
@@ -316,6 +308,10 @@ function floodFill(x, y, newColor) {
 
 
 /* Đưa image trong library lên main page */
+function setSourcePage(page) {
+    localStorage.setItem('sourcePage', page); // Lưu trang nguồn vào Local Storage
+}
+
 window.addEventListener("load", () => {
     // Khởi tạo kích thước canvas
     canvas.width = canvas.offsetWidth;
@@ -611,37 +607,30 @@ document.getElementById("undo").addEventListener("click", () => {
     undo();
 });
 
-// Danh sách các công cụ
-const tools = [
-    "pen", "eraser", "line", "rectangle", "circle", "triangle", 
-    "bucket", "palette", "selection", "text", "shape-list"
-];
 
-function resetToolImages() {
-    tools.forEach((tool) => {
-        const img = document.getElementById(`${tool}-img`);
-        if (img) {
-            img.src = `main-image/${tool}.png`;
-            img.classList.remove("active"); 
-        }
+/* Xử lý âm thanh nút bấm công cụ */
+const buttonSound = document.getElementById("tool-sound");
+
+const tools = document.querySelectorAll(".tools-left button, .tools-top button, .tools-bottom button");
+
+tools.forEach(tool => {
+    tool.addEventListener("click", () => {
+        buttonSound.play();
     });
-}
-
-tools.forEach((tool) => {
-    const button = document.getElementById(tool);
-    if (button) {
-        button.addEventListener("click", () => {
-            resetToolImages();
-
-            const selectedImg = document.getElementById(`${tool}-img`);
-            if (selectedImg) {
-                selectedImg.src = `main-image/${tool}2.png`; 
-                selectedImg.classList.add("active"); 
-            }
-        });
-    }
 });
 
+/* Xử lý âm thanh nút bấm chuyển hướng */
+const navigationButtons = document.querySelectorAll("button[data-target]");
 
+navigationButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        event.preventDefault(); 
 
-
+        const targetPage = button.getAttribute("data-target");
+        buttonSound.play().then(() => {
+            setTimeout(() => {
+                window.location.href = targetPage;
+            }, 350); 
+        })
+    });
+});
